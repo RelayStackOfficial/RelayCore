@@ -1,0 +1,73 @@
+RelayCore
+Copyright (c) 2026 allenjxd
+
+This product includes software developed by the contributors of the
+RelayCore project, distributed under the terms of the GNU Affero
+General Public License version 3.0 (see LICENSE).
+
+================================================================================
+THIRD-PARTY SOFTWARE NOTICES
+================================================================================
+
+This product depends on the following third-party software components.
+Each component remains under its original license; this NOTICE does not
+modify those licenses. The full text of each license is reproduced or
+referenced below.
+
+--------------------------------------------------------------------------------
+LiteLLM
+--------------------------------------------------------------------------------
+
+  Project:      LiteLLM
+  Homepage:     https://github.com/BerriAI/litellm
+  License:      MIT License (with the exception of the `enterprise/`
+                directory, which is governed by a separate BerriAI
+                Enterprise License and is NOT used by RelayCore)
+  Copyright:    Copyright (c) 2023 Berri AI
+
+  Usage in RelayCore:
+    RelayCore consumes LiteLLM as a Python pip dependency at runtime
+    only. Specifically, RelayCore uses:
+      - litellm.llms.*       (provider transformation modules)
+      - litellm.main         (acompletion / completion entry points)
+      - litellm.litellm_core_utils.streaming_handler
+      - litellm.cost_calculator (optional)
+
+    RelayCore does NOT import litellm.proxy, does NOT bundle the
+    enterprise/ directory, and does NOT redistribute LiteLLM source
+    code. LiteLLM is installed from the upstream package index by the
+    end user's environment.
+
+  MIT License text:
+
+    MIT License
+
+    Copyright (c) 2023 Berri AI
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+================================================================================
+
+For the licenses of LiteLLM's transitive dependencies, see the output of
+running `pip-licenses` (or equivalent) against your installed environment.
+A license audit is performed prior to each commercial release of
+RelayCore; the audit report is maintained internally by the project
+maintainers.
+
+================================================================================
